@@ -24,14 +24,12 @@ Borrow is fully collateralized.
 User places an order to buy ETH.
 
 ## Main flow
-- User posts an order to buy tokens (e.g. ETH for USDC)
-- System notifies market makers about the order
-- Makers competing in an auction, the best quote wins
-- Maker settles the order with borrowed funds
-  - Maker borrows 1 ETH from lending pool
-  - Sends 1 ETH to the trader
-  - Receives 1000 USDC from the trader
-  - Repays 1 ETH to the lending pool
+- Trader posts an order to buy tokens (e.g. ETH for USDC)
+- Maker wins auction
+- Maker borrows 1 ETH from lending pool
+- Maker sends 1 ETH to the trader
+- Trader sends 1000 USDC to the maker
+- Maker repays 1 ETH to the lending pool
 
 ## Alternative flows
 ### Market maker partially fills order 

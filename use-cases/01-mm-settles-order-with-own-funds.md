@@ -5,10 +5,10 @@
 - Market Maker
 
 ## Description
-Use case explains how market maker can settle orders with their own funds.
+Use case explains how market makers can settle orders with their own funds.
 
 ## Preconditions
-- Market maker has enough amount of token user wants to buy.
+- Market maker has enough amount of tokens user wants to buy.
 - 1 ETH = 1000 USDC
 
 | Token / Balance | Market Maker | Trader |
@@ -20,10 +20,10 @@ Use case explains how market maker can settle orders with their own funds.
 User places an order to buy ETH.
 
 ## Main flow
-- User posts an order to buy tokens (e.g. ETH for USDC)
-- System notifies market makers about the order
-- Makers competing in an auction, the best quote wins
-- Maker settles the order with their own funds
+- Trader posts an order to buy tokens (e.g. ETH for USDC)
+- Maker wins auction
+- Maker sends funds directly to the trader
+- Trader sends funds directly to the maker
 
 ## Alternative flows
 ### Market maker partially fills order 

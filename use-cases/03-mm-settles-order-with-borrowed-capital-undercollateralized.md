@@ -11,7 +11,7 @@ Borrow is undercollateralized.
 
 ## Preconditions
 - Liquidity provider has enough funds to lend
-- Market maker has enough collateral to borrow with partial collateralization
+- Market maker has enough collateral to initiate borrow with shared collateral
 - 1 ETH = 1000 USDC
 
 | Token / Balance | Market Maker | Trader | Liquidity Provider |
@@ -24,14 +24,12 @@ Borrow is undercollateralized.
 User places an order to buy ETH.
 
 ## Main flow
-- User posts an order to buy tokens (e.g. ETH for USDC)
-- System notifies market makers about the order
-- Makers competing in an auction, the best quote wins
-- Maker settling the order with partially collateralized borrowing
-  - Maker initiates borrow with joined collateral depositing his part (300 USDC)
-  - Trader fills other part of the joined collateral by depositing 1000 USDC
-  - Maker borrows 1 ETH and sends it to the trader (In fact, borrow goes directly to the trader)
-  - Maker repays 1 ETH to the lending pool unlocking 1300 USDC
+- Trader posts an order to buy tokens (e.g. ETH for USDC)
+- Maker wins auction
+- Maker initiates borrow with joined collateral depositing his part (300 USDC)
+- Trader deposits remaining part of the joined collateral (1000 USDC)
+- Maker borrows 1 ETH and sends it to the trader (In fact, borrow goes directly to the trader?)
+- Maker repays 1 ETH to the lending pool unlocking 1300 USDC
 
 ## Alternative flows
 ### Market maker partially fills order
