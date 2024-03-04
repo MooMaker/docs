@@ -63,7 +63,7 @@ Order times out
 
 ```mermaid
 flowchart LR
-  subgraph Settle order with borrowed funds collateralized
+  subgraph Settle order with borrowed funds undercollateralized
     uc0((Place order))
     uc1((Trade tokens))
     uc2((Borrow funds))
